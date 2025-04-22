@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}Add a Recipe - Meal Match{% endblock %}
+{% block page %}Add a Recipe{% endblock %}
+
+{% block content %}
+<div style="margin-top: 30px;">
+  <h4 style="text-align: center;">Create a New Recipe</h4>
+
+  <form method="POST" action="/add-recipe">
+    <div class="input-field">
+      <input id="name" name="name" type="text" required>
+      <label for="name">Recipe Name</label>
+    </div>
+
+    <div class="input-field">
+      <textarea id="ingredients" name="ingredients" class="materialize-textarea" required></textarea>
+      <label for="ingredients">Ingredients (comma-separated)</label>
+    </div>
+
+    <div class="input-field">
+      <textarea id="instructions" name="instructions" class="materialize-textarea" required></textarea>
+      <label for="instructions">Instructions</label>
+    </div>
+
+    <button type="submit" class="btn" style="background-color: #be6e46; width: 100%;">Add Recipe</button>
+  </form>
+</div>
+{% endblock %}
